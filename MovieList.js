@@ -1,0 +1,26 @@
+"use strict";
+
+var MovieList = function MovieList(_ref) {
+  var movies = _ref.movies,
+      selectedMovies = _ref.selectedMovies;
+  return React.createElement(
+    "div",
+    { className: "movie-list" },
+    selectedMovies.map(function (movie) {
+      return React.createElement(MovieListEntry, { key: movie.title, movie: movie, title: movie.title });
+    })
+  );
+};
+//We want MovieList to be a container for individual movies
+//In app, we sent down props = movies(exampleMovieData) and the filtered movieList (selectedMovies)
+
+// PropTypes tell other developers what `props` a component expects
+// Warnings will be shown in the console when the defined rules are violated
+// MovieList.propTypes = {
+//   movies: React.PropTypes.array.isRequired
+// };
+
+// In the ES6 spec, files are "modules" and do not share a top-level scope.
+// `var` declarations will only exist globally where explicitly defined.
+window.MovieList = MovieList;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21wb25lbnRzL01vdmllTGlzdC5qc3giXSwibmFtZXMiOlsiTW92aWVMaXN0IiwibW92aWVzIiwic2VsZWN0ZWRNb3ZpZXMiLCJtYXAiLCJtb3ZpZSIsInRpdGxlIiwid2luZG93Il0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUlBLFlBQVksU0FBWkEsU0FBWTtBQUFBLE1BQUdDLE1BQUgsUUFBR0EsTUFBSDtBQUFBLE1BQVdDLGNBQVgsUUFBV0EsY0FBWDtBQUFBLFNBQ2Q7QUFBQTtBQUFBLE1BQUssV0FBVSxZQUFmO0FBQ0dBLG1CQUFlQyxHQUFmLENBQW1CO0FBQUEsYUFDbEIsb0JBQUMsY0FBRCxJQUFnQixLQUFLQyxNQUFNQyxLQUEzQixFQUFrQyxPQUFPRCxLQUF6QyxFQUFnRCxPQUFPQSxNQUFNQyxLQUE3RCxHQURrQjtBQUFBLEtBQW5CO0FBREgsR0FEYztBQUFBLENBQWhCO0FBT0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQUMsT0FBT04sU0FBUCxHQUFtQkEsU0FBbkIiLCJmaWxlIjoiTW92aWVMaXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsidmFyIE1vdmllTGlzdCA9ICh7IG1vdmllcywgc2VsZWN0ZWRNb3ZpZXMgfSkgPT4gKFxuICA8ZGl2IGNsYXNzTmFtZT1cIm1vdmllLWxpc3RcIj5cbiAgICB7c2VsZWN0ZWRNb3ZpZXMubWFwKG1vdmllID0+IChcbiAgICAgIDxNb3ZpZUxpc3RFbnRyeSBrZXk9e21vdmllLnRpdGxlfSBtb3ZpZT17bW92aWV9IHRpdGxlPXttb3ZpZS50aXRsZX0gLz5cbiAgICApKX1cbiAgPC9kaXY+XG4pO1xuLy9XZSB3YW50IE1vdmllTGlzdCB0byBiZSBhIGNvbnRhaW5lciBmb3IgaW5kaXZpZHVhbCBtb3ZpZXNcbi8vSW4gYXBwLCB3ZSBzZW50IGRvd24gcHJvcHMgPSBtb3ZpZXMoZXhhbXBsZU1vdmllRGF0YSkgYW5kIHRoZSBmaWx0ZXJlZCBtb3ZpZUxpc3QgKHNlbGVjdGVkTW92aWVzKVxuXG4vLyBQcm9wVHlwZXMgdGVsbCBvdGhlciBkZXZlbG9wZXJzIHdoYXQgYHByb3BzYCBhIGNvbXBvbmVudCBleHBlY3RzXG4vLyBXYXJuaW5ncyB3aWxsIGJlIHNob3duIGluIHRoZSBjb25zb2xlIHdoZW4gdGhlIGRlZmluZWQgcnVsZXMgYXJlIHZpb2xhdGVkXG4vLyBNb3ZpZUxpc3QucHJvcFR5cGVzID0ge1xuLy8gICBtb3ZpZXM6IFJlYWN0LlByb3BUeXBlcy5hcnJheS5pc1JlcXVpcmVkXG4vLyB9O1xuXG4vLyBJbiB0aGUgRVM2IHNwZWMsIGZpbGVzIGFyZSBcIm1vZHVsZXNcIiBhbmQgZG8gbm90IHNoYXJlIGEgdG9wLWxldmVsIHNjb3BlLlxuLy8gYHZhcmAgZGVjbGFyYXRpb25zIHdpbGwgb25seSBleGlzdCBnbG9iYWxseSB3aGVyZSBleHBsaWNpdGx5IGRlZmluZWQuXG53aW5kb3cuTW92aWVMaXN0ID0gTW92aWVMaXN0O1xuIl19
